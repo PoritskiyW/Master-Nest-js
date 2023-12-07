@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
-export class AppService {
+export class AppJapanService {
   constructor(
     @Inject('APP_NAME')
     private readonly name: string,
@@ -11,6 +11,6 @@ export class AppService {
   ) {}
 
   getHello(): string {
-    return `Hello World! from ${this.name}, ${this.message}`;
+    return `ハローワールド form ${this.name}, ${this.message}`;
   }
 }
