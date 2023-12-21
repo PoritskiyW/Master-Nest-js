@@ -17,7 +17,7 @@ import { SchoolModule } from './school/school.module';
     ConfigModule.forRoot({
       isGlobal: true,
       load: [ormConfig],
-      expandVariables: true
+      expandVariables: true,
     }),
     TypeOrmModule.forRootAsync({
       useFactory:

@@ -8,5 +8,5 @@ export enum WhenEventFilter {
   Today,
   Tomorrow,
   ThisWeek,
-  NextWeek
+  NextWeek,
 }

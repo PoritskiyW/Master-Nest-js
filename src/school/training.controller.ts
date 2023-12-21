@@ -1,4 +1,4 @@
-import { Controller, Post } from "@nestjs/common";
+import { Controller, Post } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Subject } from './subject.entity';
@@ -10,8 +10,8 @@ export class TrainingController {
     @InjectRepository(Subject)
     private readonly subjectRepository: Repository<Subject>,
     @InjectRepository(Teacher)
-    private readonly teacherRepository: Repository<Teacher>,
-  ) { }
+    private readonly teacherRepository: Repository<Teacher>
+  ) {}
 
   @Post('/create')
   public async savingRelation() {
@@ -37,7 +37,6 @@ export class TrainingController {
     // user.profile = null;
     // Save the user here
 
-
     const teacher1 = await this.teacherRepository.findOneBy({ id: 5 });
     const teacher2 = await this.teacherRepository.findOneBy({ id: 6 });
 
@@ -60,9 +59,10 @@ export class TrainingController {
     // );
 
     // await this.subjectRepository.save(subject);
-    await this.subjectRepository.createQueryBuilder('s')
+    await this.subjectRepository
+      .createQueryBuilder('s')
       .update()
-      .set({ name: "Confidential" })
+      .set({ name: 'Confidential' })
       .execute();
   }
 }
