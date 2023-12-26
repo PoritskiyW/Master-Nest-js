@@ -9,16 +9,16 @@ import {
   ParseIntPipe,
   UseInterceptors,
   SerializeOptions,
+  DefaultValuePipe,
   NotFoundException,
   ClassSerializerInterceptor,
-  DefaultValuePipe,
 } from '@nestjs/common';
 
-import { User } from 'src/auth/user.entity';
+import { User } from './../auth/user.entity';
 import { EventsService } from './events.service';
 import { AttendeesService } from './attendees.service';
-import { AuthGuardJwt } from 'src/auth/auth-guard.jwt';
-import { CurrentUser } from 'src/auth/current-user.decorator';
+import { AuthGuardJwt } from './../auth/auth-guard.jwt';
+import { CurrentUser } from './../auth/current-user.decorator';
 import { CreateAttendeeDto } from './input/create-attendee.dto';
 
 @Controller('event-attendance')

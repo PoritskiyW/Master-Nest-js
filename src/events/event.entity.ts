@@ -7,9 +7,9 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import { User } from 'src/auth/user.entity';
+import { User } from './../auth/user.entity';
 import { Attendee } from './attendee.entity';
-import { PaginationResult } from 'src/pagination/paginator';
+import { PaginationResult } from './../pagination/paginator';
 
 @Entity()
 export class Event {
